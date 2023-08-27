@@ -45,8 +45,57 @@
 		width: 180px;
 		height: 45px;
 	}
-.formulario {
-    margin-right: 50%;
+
+.formulario h4, .formulario-registro h4 {
+    height: 80px;
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: center;
+}
+.controls {
+    width: 100%;
+    padding: 1.3rem;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    border: 0; 
+    height: 44px;
+    font-size: 1rem;
+}
+
+.button {
+    width: 80%;
+    padding: 1rem;
+    border-radius: 20px;
+    margin-bottom: 8px;
+    border: none;
+    background-color: #181d20;
+    font-size: 1rem;
+    height: 50px;
+    width: 350px;
+    transition: 1s;
+    color: white;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: #296991;
+}
+
+.button-link {
+    color: white;
+}
+
+.link:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.formulario-registro {
     justify-content: center;
     align-items: center;
     display: flex;
@@ -59,63 +108,24 @@
     height: 400px;
 }
 
-.formulario p {
-    font-size: 18px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.hr {
-    width: 100%;
-    background-color: #ff0000;
-    margin-top: 15px;
-}
-
-.controls {
-    width: 100%;
-    margin-top: 20px;
-    padding: 20px;
-    border-radius: 5px;
-    border: 0; 
-    height: 44px;
-    font-size: 20px;
-}
-
-.button {
-    width: 100%;
-    padding: 10px;
-    border-radius: 10px;
-    border: 0;
-    background-color: #2b2f31;
-    color: #ffffff;
-    font-size: 20px;
-    height: 50px;
-}
-
-a {
-    text-decoration: none;
-    color: #000000;
-}
-
 .conteiner-controls {
     display: flex;
     flex-direction: column;
-    height: 80%;
+    height: 100%;
 }
 
 .conteiner-button {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    height: 300%;
 }
 
 .button-registro {
-    margin: 30px 10px 0 0 ;
+    margin: 20px 0 20px 0 ;
 }
 
 .titulo-registro {
-    height: 0;
-    padding: 0 0 60px 0;
+    padding: 2rem;
 }
 .footer {
     max-height: 10%;
