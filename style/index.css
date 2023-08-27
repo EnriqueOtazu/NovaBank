@@ -154,7 +154,10 @@
 	/* footer */
 	
 	.footer {
+<<<<<<< Updated upstream
 		max-height: 10%;
+=======
+>>>>>>> Stashed changes
 		background-color: #fff;
 		padding: 1em 0;
 		position: absolute;
