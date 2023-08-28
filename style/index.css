@@ -154,8 +154,9 @@
 	/* footer */
 	
 	.footer {
+		font-size: 12px;
 		background-color: #fff;
-		padding: 1em 0;
+		padding: 0.6em 0;
 		position: absolute;
 		width: 100%;
 		bottom: 0;
@@ -171,7 +172,7 @@
 		padding: 0 15px;
 	}
 	.footer-links h4{
-		font-size: 20px;
+
 		margin-bottom: 25px;
 		font-weight: 500;
 		border-bottom: 2px solid #3044B6;
@@ -182,7 +183,6 @@
 		margin-bottom: 15px;
 	}
 	.footer-links ul li a{
-		font-size: 18px;
 		text-decoration: none;
 		color: black;
 		display: block;
@@ -197,9 +197,9 @@
 	.social-link a{
 		display: inline-block;
 		min-height: 40px;
-		width: 40px;
+		width: 100px;
 		background-color: rgba(255, 255, 255, 0.2);
-		margin: 0 10px 10px 0 ;
+		margin: 0 1px 1px 0 ;
 		text-align: center;
 		line-height: 40px;
 		border-radius: 50%;

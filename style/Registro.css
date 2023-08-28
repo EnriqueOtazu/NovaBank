@@ -45,14 +45,7 @@
 		width: 180px;
 		height: 45px;
 	}
-
-.formulario h4, .formulario-registro h4 {
-    height: 80px;
-    font-size: 1.6rem;
-    display: flex;
-    justify-content: center;
-}
-.controls {
+.informacion {
     width: 100%;
     padding: 1.3rem;
     border-radius: 15px;
@@ -63,39 +56,28 @@
 }
 
 .button {
-    width: 80%;
+    width: 60%;
     padding: 1rem;
-    border-radius: 20px;
+    border-radius: 10px;
     margin-bottom: 8px;
     border: none;
     background-color: #181d20;
     font-size: 1rem;
     height: 50px;
     width: 350px;
-    transition: 1s;
-    color: white;
+    transition: 2s;
+    color: rgb(255, 255, 255);
 }
-
 .button:hover {
     cursor: pointer;
-    background-color: #296991;
+    background-color: #ff0000;
 }
-
-.button-link {
-    color: white;
-}
-
 .link:hover {
     cursor: pointer;
     text-decoration: underline;
 }
 
-a {
-    text-decoration: none;
-    color: #000000;
-}
-
-.formulario-registro {
+.registro {
     justify-content: center;
     align-items: center;
     display: flex;
@@ -108,26 +90,22 @@ a {
     height: 400px;
 }
 
-.conteiner-controls {
+.bloques{
     display: flex;
     flex-direction: column;
     height: 100%;
 }
 
-.conteiner-button {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-.button-registro {
+.boton-registro {
     margin: 20px 0 20px 0 ;
 }
 
 .titulo-registro {
     padding: 2rem;
 }
+
 .footer {
+    font-size: 12px;
     max-height: 10%;
     position: absolute;
     padding: 2rem 8%;
@@ -145,7 +123,6 @@ a {
     padding: 0 15px;
 }
 .footer-links h4{
-    font-size: 20px;
     margin-bottom: 25px;
     font-weight: 500;
     border-bottom: 2px solid #3044B6;
@@ -156,7 +133,6 @@ a {
     margin-bottom: 15px;
 }
 .footer-links ul li a{
-    font-size: 18px;
     text-decoration: none;
     color: black;
     display: block;
