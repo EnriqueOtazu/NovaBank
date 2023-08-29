@@ -62,8 +62,8 @@
 .datos p {
     font-size: 18px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
 }
-
 .hr {
     width: 100%;
     background-color: #ff0000;
@@ -179,3 +179,6 @@ a {
         margin-bottom: 30px;
     }
 }
+
+  
+ 
