@@ -1,14 +1,16 @@
 import React from "react";
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import Index from "./components/Index/Index";
-// import Footer from './components/Footer/Footer';
-
+import Menu from "./components/menu/Menu";
 
 function App() {
   return (
-    <React.Fragment>
-       <Index/>
-       {/* <Footer /> */}
-    </React.Fragment>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Index/>} />
+        <Route path="/Menu" element={<Menu/>} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

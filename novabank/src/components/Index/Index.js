@@ -16,7 +16,7 @@ export const Index = () => {
           </NavItem>
 
           <NavItem left>
-            <NavLink href="/components/"  Navbar>mi cuenta</NavLink>
+            <NavLink href="../menu/menu.js"  Navbar>mi cuenta</NavLink>
           </NavItem>
 
         </Nav>
