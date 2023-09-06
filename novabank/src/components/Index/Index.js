@@ -6,8 +6,8 @@ export const Index = () => {
   return (
     <>
       <Navbar className="my-1," color="faded" style={{boxShadow:' 0px 0.5px 0px 0px rgba(0,0,0,0.3)'}}>
-        <NavbarBrand href="/">
-          <img alt="logo" src={logo} style={{height: 40, width: 180}} block/>
+        <NavbarBrand href="/" >
+          <img alt="logo" src={logo} style={{height: 40, width: 180,}} />
         </NavbarBrand>
         <Nav className="mr-auto" style={{color:'#3044B6'}}>
 
@@ -16,7 +16,7 @@ export const Index = () => {
           </NavItem>
 
           <NavItem left>
-            <NavLink href="../menu/menu.js"  Navbar>mi cuenta</NavLink>
+            <NavLink href="../menu"  Navbar>mi cuenta</NavLink>
           </NavItem>
 
         </Nav>
