@@ -11,7 +11,7 @@ export const Index = () => {
     <>
       {/* Navbar fijo */}
       <Navbar className="my-1," color="faded" style={{boxShadow:' 0px 0.5px 0px 0px rgba(0,0,0,0.3)'}}>
-        <NavbarBrand href="/" >
+        <NavbarBrand href="/"  >
           <img alt="logo" src={logo} style={{height: 40, width: 180}} />
         </NavbarBrand>
         <Nav className="mr-auto" style={{color:'#3044B6'}}>
@@ -26,10 +26,11 @@ export const Index = () => {
 
         </Nav>
       </Navbar>
-
+      {/*Titulo principal */}
+      <h1 style={{textAlign:'center'}} className='p-4'>¡Hola! ¿Cómo podemos ayudarte? </h1>
       {/* Carousel */}
       <CarouselImage/>
-      
+
       {/* Info del banco */}
       <div className='p-5'>
         <h1 style={{textAlign:'center'}}>Nuestra Historia</h1>
