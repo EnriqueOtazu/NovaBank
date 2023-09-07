@@ -3,24 +3,30 @@ import Header from '../header/Header';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
+import { calcularTotal } from './calculos';
+
 
 export const Prestamos = () => {
 
   const [cantidad, setCantidad] = useState(0);
   const [plazo, setPlazo] = useState("");
+  const [error, setError] = useState(false);
 
   const calcularPrestamos = e =>{
     e.preventDefault();
     if(cantidad === 0 || plazo === ""){
-      
+        setError(true);
+        return;
     }
+    setError(false);
+
+    calcularTotal(cantidad,plazo);
   }
 
   return (
     <><Header />
       <h1 className='p-5'>Préstamos personales</h1>
       <Form className='p-5' onSubmit={calcularPrestamos}>
-        {cantidad} {plazo}
         <Form.Group>
           <Form.Label>Cantidad Prestamo</Form.Label>
           <InputGroup className="mb-3">
@@ -44,6 +50,7 @@ export const Prestamos = () => {
           Calcular
         </Button>
       </Form>
+      {(error) ? <p className='error'>Todos los campos son obligatorios...</p> : "" }
     </>
   );
 }
