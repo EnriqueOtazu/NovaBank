@@ -10,7 +10,7 @@ export const CarouselImage = () => {
   return (
     <Carousel className='p-5'>
       <Carousel.Item>
-        <img style={{height: '80vh'}}
+        <img style={{height: '70vh'}}
           className="d-flex w-100"
           src={image1}
           alt="First slide"
@@ -21,7 +21,7 @@ export const CarouselImage = () => {
         </Carousel.Caption> */}
       </Carousel.Item>
       <Carousel.Item>
-        <img style={{height: '80vh'}}
+        <img style={{height: '70vh'}}
           className="d-block w-100"
           src={image2}
           alt="First slide"
@@ -32,7 +32,7 @@ export const CarouselImage = () => {
         </Carousel.Caption> */}
       </Carousel.Item>
       <Carousel.Item>
-        <img style={{height: '80vh'}}
+        <img style={{height: '70vh'}}
           className="d-block w-100"
           src={image3}
           alt="First slide"
@@ -45,7 +45,7 @@ export const CarouselImage = () => {
         </Carousel.Caption> */}
       </Carousel.Item>
       <Carousel.Item>
-        <img style={{height: '80vh'}}
+        <img style={{height: '70vh'}}
           className="d-block w-100"
           src={image4}
           alt="First slide"

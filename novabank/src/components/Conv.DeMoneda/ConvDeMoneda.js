@@ -27,9 +27,8 @@ export const ConvDeMoneda = () => {
     <> <Header />
        <h1>Convertidor</h1>
        <div className="container">
-      <h1>Currency Converter</h1>
       <div className="form-group">
-        <label htmlFor="amount">Amount:</label>
+        <label htmlFor="amount">Monto:</label>
         <input
           type="number"
           id="amount"
@@ -39,7 +38,7 @@ export const ConvDeMoneda = () => {
         />
       </div>
       <div className="form-group">
-        <label htmlFor="fromCurrency">From:</label>
+        <label htmlFor="fromCurrency">De:</label>
         <select
           id="fromCurrency"
           className="form-control"
@@ -52,7 +51,7 @@ export const ConvDeMoneda = () => {
         </select>
       </div>
       <div className="form-group">
-        <label htmlFor="toCurrency">To:</label>
+        <label htmlFor="toCurrency">Para:</label>
         <select
           id="toCurrency"
           className="form-control"
