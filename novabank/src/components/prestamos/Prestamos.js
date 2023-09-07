@@ -4,6 +4,9 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import { calcularTotal } from './calculos';
+import {Resultados} from './Resultados';
+import { Mensaje } from './Mensaje';
+import Footer from '../Footer/Footer';
 
 
 export const Prestamos = () => {
@@ -11,6 +14,7 @@ export const Prestamos = () => {
   const [cantidad, setCantidad] = useState(0);
   const [plazo, setPlazo] = useState("");
   const [error, setError] = useState(false);
+  const [total, setTotal] = useState(0);
 
   const calcularPrestamos = e =>{
     e.preventDefault();
@@ -20,13 +24,21 @@ export const Prestamos = () => {
     }
     setError(false);
 
-    calcularTotal(cantidad,plazo);
+    const total = calcularTotal(cantidad,plazo);
+    setTotal(total);
+  }
+
+  let componente;
+  if (total === 0){
+    componente = <Mensaje/>
+  }else{
+    componente = <Resultados total={total} cantidad={cantidad} plazo={plazo} />
   }
 
   return (
     <><Header />
-      <h1 className='p-5'>Préstamos personales</h1>
-      <Form className='p-5' onSubmit={calcularPrestamos}>
+      <h1 className='p-4'>Préstamos personales</h1>
+      <Form className='p-4' onSubmit={calcularPrestamos}>
         <Form.Group>
           <Form.Label>Cantidad Prestamo</Form.Label>
           <InputGroup className="mb-3">
@@ -51,6 +63,13 @@ export const Prestamos = () => {
         </Button>
       </Form>
       {(error) ? <p className='error'>Todos los campos son obligatorios...</p> : "" }
+
+      <div className='mensaje'>
+        {componente}
+      </div>
+
+      {/* Footer */}
+      <Footer/>
     </>
   );
 }
