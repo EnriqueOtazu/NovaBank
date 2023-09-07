@@ -7,7 +7,7 @@ import Form from 'react-bootstrap/Form';
 import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-// import Footer from '../Footer/Footer';
+import Footer from '../Footer/Footer';
 
 export const InicioSesion = () => {
   return (
@@ -28,38 +28,40 @@ export const InicioSesion = () => {
             <div className=' p-5 bg-white '>
                 <Row className=''>
                     <Col>
-                        <Image src={Fondo}  width={500} rounded />
+                        <Image src={Fondo}  width={500} height={400} rounded />
                     </Col>
                     <Col>
                         <Form className='mb-5'>
-                            <h1>Bienvenido</h1>
-                            <Form.Group className="mb-3" controlId="formBasicEmail">
-                                <Form.Label>Usuario</Form.Label>
-                                <Form.Control type="text" placeholder="Usuario" />
-                                
+                            <h1 className='m-5'>Bienvenido</h1>
+                            <Form.Group className="mb-4" controlId="formBasicEmail">
+                                <Form.Control type="text" placeholder="Usuario" /> 
                             </Form.Group>
 
-                            <Form.Group className="mb-3" controlId="formBasicPassword">
-                                <Form.Label>Contraaseña</Form.Label>
-                                <Form.Control type="password" placeholder="Password" />
+                            <Form.Group className="mb-4" controlId="formBasicPassword">
+                                <Form.Control type="password" placeholder="Contraseña" />
                             </Form.Group>
                             <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                                <Form.Check type="checkbox" label="Check me out" />
+                                <Form.Check type="checkbox" label="Recordar DNI y Usuario" />
                             </Form.Group>
-                            <Button variant="primary" type="submit">
-                                Submit
-                            </Button>
+                            <Form.Group className="mb-4" controlId="submit">
+                                <Button variant="primary" type="submit"  id='submit' href='/menu'>
+                                    Iniciar Sesión
+                                </Button>
+                            </Form.Group>
+                            <Form.Group>
+                                <Form.Text  >
+                                    Si no tenés u olvidaste tu clave y/o usuario 
+                                    {/* <a href='#'>Crear o recuperar </a> */}
+                                </Form.Text>
+                            </Form.Group>
                         </Form>
                     </Col>
                 </Row> 
             </div> 
         </div>
 
-        <div>
-
-            
-        </div>
         {/* <Footer/> */}
+        <Footer/>
     </>
     
   )
