@@ -1,13 +1,13 @@
 import React from 'react';
-import logo from "./NovaBank.png";
-import Fondo from "./fondoBanco.jpg";
+import logo from "../Functions/inicio-sesion/NovaBank.png";
+import Fondo from "../Functions/inicio-sesion/fondoBanco.jpg";
 import {Navbar,Nav,NavbarBrand} from 'reactstrap';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Footer from '../Footer/Footer';
+import Footer from './Footer/Footer';
 
 export const InicioSesion = () => {
   return (

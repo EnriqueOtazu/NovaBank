@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import Header from '../header/Header';
+import Header from './header/Header';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
-import { calcularTotal } from './calculos';
-import {Resultados} from './Resultados';
-import { Mensaje } from './Mensaje';
-import Footer from '../Footer/Footer';
+import { calcularTotal } from '../Functions/prestamos/calculos';
+import {Resultados} from '../Functions/prestamos/Resultados';
+import { Mensaje } from '../Functions/prestamos/Mensaje';
+import Footer from './Footer/Footer';
 
 
 export const Prestamos = () => {

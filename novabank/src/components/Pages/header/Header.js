@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from "react";
 import logo from "./NovaBank.png";
-import {Navbar,Nav,NavItem,NavLink,NavbarBrand} from 'reactstrap';
+import {Navbar,Nav,NavbarBrand} from 'reactstrap';
 import Button from 'react-bootstrap/Button';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import NavDropdown from 'react-bootstrap/NavDropdown';
@@ -34,6 +34,9 @@ export const Header = () => {
             <NavDropdown.Item href="#">Transferencias</NavDropdown.Item>
             <NavDropdown.Item href="#">Págos</NavDropdown.Item>
             <NavDropdown.Item href="#">Atención al cliente</NavDropdown.Item>
+            <NavDropdown.Divider />
+            <NavDropdown.Item href="#">Mi cuenta</NavDropdown.Item>
+            <NavDropdown.Item href="#">Ayuda</NavDropdown.Item>
             <NavDropdown.Item href="/#">Cerrar Sección</NavDropdown.Item>
           </Offcanvas.Body>
         </Offcanvas>
@@ -44,15 +47,6 @@ export const Header = () => {
           <img alt="logo" src={logo} style={{height: 40, width: 180}} block/>
         </NavbarBrand>
         <Nav className="mr-auto" style={{color:'#3044B6'}}>
-
-          <NavItem>
-            <NavLink href="/components/"  Navbar>Ayuda</NavLink>
-          </NavItem>
-
-          <NavItem left>
-            <NavLink href="../menu/menu.js"  Navbar>mi cuenta</NavLink>
-          </NavItem>
-
         </Nav>
       </Navbar>
     </>

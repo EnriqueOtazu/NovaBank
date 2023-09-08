@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import Header from '../header/Header';
+import Header from './header/Header';
 import { useState } from 'react';
 // import Form from 'react-bootstrap/Form';
 

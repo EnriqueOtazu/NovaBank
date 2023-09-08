@@ -1,7 +1,7 @@
 import React from 'react'
-import Header from '../header/Header';
+import Header from './header/Header';
 import Accordion from 'react-bootstrap/Accordion';
-import Footer from '../Footer/Footer';
+import Footer from './Footer/Footer';
 
 export const Menu = () =>  {
   return (

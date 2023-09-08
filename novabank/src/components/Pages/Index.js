@@ -1,8 +1,8 @@
 import React from 'react';
-import logo from "./NovaBank.png";
+import logo from "../Functions/Index/NovaBank.png";
 import {Navbar,Nav,NavItem,NavLink,NavbarBrand} from 'reactstrap';
-import  CarouselImage from './CarouselImage';
-import Footer from '../Footer/Footer';
+import  CarouselImage from '../Functions/Index/CarouselImage';
+import Footer from './Footer/Footer';
 
 
 export const Index = () => {
@@ -27,7 +27,8 @@ export const Index = () => {
         </Nav>
       </Navbar>
       {/*Titulo principal */}
-      <h1 style={{textAlign:'center'}} className='p-4'>¡Hola! ¿Cómo podemos ayudarte? </h1>
+      <h1 style={{textAlign:'center'}} className='p-4'><span style={{color:"#3044B6"}}>¡Hola!</span> ¿Cómo podemos ayudarte? </h1>
+      
       {/* Carousel */}
       <CarouselImage/>
 
