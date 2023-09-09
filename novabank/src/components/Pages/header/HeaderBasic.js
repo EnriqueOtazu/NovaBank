@@ -8,7 +8,7 @@ export const HeaderBasic = () => {
   return (
     <>
       {/* Navbar fijo */}
-      <Navbar className=" bg-body-tertiary" expand="lg"  style={{boxShadow:' 0px 0.5px 0px 0px rgba(0,0,0,0.3)'}}>
+      <Navbar className=" bg-body-tertiary"   style={{boxShadow:' 0px 0.5px 0px 0px rgba(0,0,0,0.3)'}}>
         <Container>
 
           <Navbar.Brand href="/"  className=''>
@@ -17,7 +17,7 @@ export const HeaderBasic = () => {
         </Container>
 
        
-          <Nav className="mr-auto" style={{fontSize: 20, marginRight: 25}} >
+          <Nav className="mr-auto" style={{fontSize: 20, marginRight: 15}} >
 
             <Nav.Item style={{marginRight: 20}}>
               <Nav.Link href="/components/"  Navbar>Ayuda</Nav.Link>

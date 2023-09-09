@@ -1,6 +1,9 @@
 import React, {useEffect,useState} from 'react';
-// import Header from './header/Header';
+import Header from './header/Header';
 import '../Functions/conversor/style.css';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import Footer from '../Pages/Footer/Footer';
 
 
 
@@ -37,48 +40,49 @@ export const ConvDeMoneda = () => {
   };
   return (
     <> 
-      {/* <Header /> */}
+     {/* Header  */}
+      <Header />
+
       
-      <div className="background">
-      <div className="container">
-        <div className="selects-container">
-          <select
-            value={moneda1}
-            name="moneda-1"
-            id="moneda-1"
-            onChange={(e) => setMoneda1(e.target.value)}
-          >
-            {monedas.map((moneda) => (
-              <option value={moneda}>{moneda}</option>
-            ))}
-          </select>
-          <select
-            value={moneda2}
-            name="moneda-2"
-            id="moneda-2"
-            onChange={(e) => setMoneda2(e.target.value)}
-          >
-            {monedas.map((moneda) => (
-              <option value={moneda}>{moneda}</option>
-            ))}
-          </select>
-        </div>
-        <div className="inputs-container">
-          <input
-            className=""
-            type="text"
-            value={monto}
-            onChange={(e) => setMonto(e.target.value)}
-          />
-          <p className=""> {moneda2}: {result}</p>
-        </div>
-        <div>
-          <button onClick={handleConvert}>Convertir</button>
+      {/* Conversor */}
+      <div className="background m-lg-3 bg-light p-5" style={{boxShadow: '-4px 4px 12px 0px rgba(0,0,0,0.5)'}}>
+        <h2 >Conversor de moneda</h2>
+        <div className="container p-5">
+          <div className="selects-container">
+            <Form.Group className="mb-3">
+              <Form.Label>De:</Form.Label>
+              <Form.Select value={moneda1} name="moneda-1" id="moneda-1" onChange={(e) => setMoneda1(e.target.value)}>
+                {monedas.map((moneda) => (
+                  <option value={moneda}>{moneda}</option>
+                ))}
+              </Form.Select>
+            </Form.Group>
+
+            <Form.Group className="mb-3">
+              <Form.Label>A:</Form.Label>
+              <Form.Select value={moneda2} name="moneda-2" id="moneda-2" onChange={(e) => setMoneda2(e.target.value)}>
+                {monedas.map((moneda) => (
+                <option value={moneda}>{moneda}</option>
+                ))}
+              </Form.Select>
+            </Form.Group>
+
+          </div>
+
+          <Form.Group className="mb-3">
+            <Form.Label>Cantidad</Form.Label>
+            <Form.Control type="text" className='mb-3' value={monto} onChange={(e) => setMonto(e.target.value)} />
+            <p className=""> {moneda2}: {result}</p>
+          </Form.Group>
+
+          <Form.Group>
+            <Button onClick={handleConvert}>Convertir</Button>
+          </Form.Group>
         </div>
       </div>
-    </div>
 
-     
+     {/* Footer */}
+      <Footer />
     </>
   );
 }
