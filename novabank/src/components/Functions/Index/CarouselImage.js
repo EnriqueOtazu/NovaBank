@@ -1,4 +1,5 @@
 import React from 'react';
+import './style.css'
 import Carousel from 'react-bootstrap/Carousel';
 import image1 from './mediaAct/estudiantes.png';
 import image2 from './mediaAct/parejaMayor.png';
@@ -12,7 +13,8 @@ export const CarouselImage = () => {
     <>
       <Carousel className='p-5 ' data-bs-theme="dark">
         <Carousel.Item >
-          <img style={{height: '65vh'}}
+          <img 
+          // style={{height: '65vh'}}
             className="d-flex w-100 m-lg-auto mr-auto"
             src={image1}
             alt="First slide"
@@ -23,7 +25,8 @@ export const CarouselImage = () => {
           </Carousel.Caption> */}
         </Carousel.Item>
         <Carousel.Item>
-          <img style={{height: '65vh'}}
+          <img 
+          // style={{height: '65vh'}}
             className="d-block w-100 m-lg-auto mr-auto"
             src={image2}
             alt="First slide"
@@ -34,7 +37,8 @@ export const CarouselImage = () => {
           </Carousel.Caption> */}
         </Carousel.Item>
         <Carousel.Item>
-          <img style={{height: '65vh'}}
+          <img 
+          // style={{height: '65vh'}}
             className="d-block w-100 m-lg-auto mr-auto"
             src={image3}
             alt="First slide"
@@ -47,7 +51,8 @@ export const CarouselImage = () => {
           </Carousel.Caption> */}
         </Carousel.Item>
         <Carousel.Item>
-          <img style={{height: '65vh'}}
+          <img 
+          // style={{height: '65vh'}}
             className="d-block w-100 m-lg-auto mr-auto"
             src={image4}
             alt="First slide"
