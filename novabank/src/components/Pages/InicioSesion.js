@@ -1,7 +1,6 @@
 import React from 'react';
-import logo from "../Functions/inicio-sesion/NovaBank.png";
+import HeaderBasic from './header/HeaderBasic';
 import Fondo from "../Functions/inicio-sesion/fondoBanco.jpg";
-import {Navbar,Nav,NavbarBrand} from 'reactstrap';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Image from 'react-bootstrap/Image';
@@ -13,17 +12,9 @@ export const InicioSesion = () => {
   return (
     <>
         {/* Navbar fijo */}
-      <Navbar className="my-1" color="faded" style={{boxShadow:' 0px 0.5px 0px 0px rgba(0,0,0,0.3)'}} block>
-        <NavbarBrand href="/" >
-          <img alt="logo" src={logo} style={{height: 40, width: 180,}} />
-        </NavbarBrand>
-        <Nav className="mr-auto" style={{color:'#3044B6'}}>
-        </Nav>
-      </Navbar>
+        <HeaderBasic/>
       
       {/* Login */}
-
-   
         <div className='d-flex justify-content-center aling-item-center p-5' style={{boxShadow: '-4px 4px 12px 0px rgba(0,0,0,0.5)'}}>
             <div className=' p-5 bg-white '>
                 <Row className=''>
@@ -43,15 +34,15 @@ export const InicioSesion = () => {
                             <Form.Group className="mb-3" controlId="formBasicCheckbox">
                                 <Form.Check type="checkbox" label="Recordar DNI y Usuario" />
                             </Form.Group>
-                            <Form.Group className="mb-4" controlId="submit">
-                                <Button variant="primary" type="submit"  id='submit' href='/menu'>
+                            <Form.Group className="mb-4 d-grid gap-2" controlId="submit">
+                                <Button variant="primary"  type="submit"  id='submit' href='/menu'>
                                     Iniciar Sesión
                                 </Button>
                             </Form.Group>
                             <Form.Group>
                                 <Form.Text  >
-                                    Si no tenés u olvidaste tu clave y/o usuario 
-                                    {/* <a href='#'>Crear o recuperar </a> */}
+                                    Si no tenés u olvidaste tu clave y/o usuario. 
+                                    <a href='/Registro'>  Crear o recuperar </a>
                                 </Form.Text>
                             </Form.Group>
                         </Form>

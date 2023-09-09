@@ -5,6 +5,8 @@ import InicioSesion from "./components/Pages/InicioSesion";
 import Menu from "./components/Pages/Menu";
 import Prestamos from "./components/Pages/Prestamos";
 import ConvDeMoneda from "./components/Pages/ConvDeMoneda";
+import Registro from "./components/Pages/Registro";
+import NotFoundPage from "./components/Pages/NotFoundPage";
 
 function App() {
   return (
@@ -12,9 +14,11 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Index/>} />
         <Route path="/InicioSesion" element={<InicioSesion/>} />
+        <Route path="/Registro" element={<Registro/>} />
         <Route path="/Menu" element={<Menu/>} />
         <Route path="/prestamos" element={<Prestamos/>} />
         <Route path="/ConvertidorDeMoneda" element={<ConvDeMoneda/>} />
+        <Route path="*" element={<NotFoundPage/>} />
       </Routes>
     </BrowserRouter>
   );
