@@ -1,9 +1,10 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
-import image1 from './media/estudiantes.jpeg';
-import image2 from './media/parejaMayor.jpg';
-import image3 from './media/playa.jpg';
+import image1 from './mediaAct/estudiantes.png';
+import image2 from './mediaAct/parejaMayor.png';
+import image3 from './mediaAct/playa.png';
 import image4 from './media/familia-sonriendo.jpg';
+
 
 
 export const CarouselImage = () => {
