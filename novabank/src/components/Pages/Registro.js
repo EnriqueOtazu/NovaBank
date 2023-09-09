@@ -1,5 +1,5 @@
 import React from 'react';
-import {Navbar,Nav,NavItem,NavLink,NavbarBrand} from 'reactstrap';
+import {Navbar,NavbarBrand} from 'reactstrap';
 import logo from "../Pages/header/NovaBank.png";
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
@@ -15,17 +15,6 @@ export const Registro = () => {
         <NavbarBrand href="/"  >
           <img alt="logo" src={logo} style={{height: 40, width: 180}} />
         </NavbarBrand>
-        <Nav className="mr-auto" style={{color:'#3044B6'}}>
-
-          <NavItem>
-            <NavLink href="/components/"  Navbar>Ayuda</NavLink>
-          </NavItem>
-
-          <NavItem left>
-            <NavLink href="../InicioSesion"  Navbar>mi cuenta</NavLink>
-          </NavItem>
-
-        </Nav>
       </Navbar>
 
       {/* Form Regsitro */}
@@ -36,20 +25,35 @@ export const Registro = () => {
           <Form className='mb-5'>
                           
             <Form.Group className="mb-4" controlId="formBasicEmail">
-                <Form.Control type="text" placeholder="Usuario" /> 
+                <Form.Control type="text" placeholder="Nombre y Apellido" /> 
+            </Form.Group>
+
+            <Form.Group className="mb-4" controlId="formBasicPassword">
+              <Form.Control type="email" placeholder="Email" />
+            </Form.Group>
+
+            <Form.Group className="mb-4" controlId="formBasicPassword">
+              <Form.Control type="number" placeholder="DNI" />
+            </Form.Group>
+
+            <Form.Group className="mb-4" controlId="formBasicPassword">
+              <Form.Label>Fecha de nacimiento</Form.Label>
+              <Form.Control type="date" placeholder="Fecha de nacimiento" />
             </Form.Group>
 
             <Form.Group className="mb-4" controlId="formBasicPassword">
               <Form.Control type="password" placeholder="Contraseña" />
             </Form.Group>
 
-            <Form.Group className="mb-3" controlId="formBasicCheckbox">
-              <Form.Check type="checkbox" label="Recordar DNI y Usuario" />
-            </Form.Group>
-            
             <Form.Group className="mb-4 d-grid gap-2" controlId="submit">
               <Button variant="primary"  type="submit"  id='submit' href='/menu'>
-                Iniciar Sesión
+                Registrar
+              </Button>
+            </Form.Group>
+
+            <Form.Group className="mb-4 d-grid gap-2" controlId="submit">
+              <Button variant="light"  type="submit" href='/'>
+                Volver
               </Button>
             </Form.Group>
   

@@ -23,7 +23,7 @@ export const Header = () => {
 
         <Offcanvas show={show} onHide={handleClose}>
           <Offcanvas.Header closeButton>
-            <Offcanvas.Title>Menú</Offcanvas.Title>
+            <Offcanvas.Title style={{color:'#3044B6', fontSize: 25}}>Menú</Offcanvas.Title>
           </Offcanvas.Header>
           <NavDropdown.Divider />
           <Offcanvas.Body className=''>

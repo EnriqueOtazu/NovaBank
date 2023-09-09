@@ -1,77 +1,84 @@
-import React from 'react';
-import axios from 'axios';
-import Header from './header/Header';
-import { useState } from 'react';
-// import Form from 'react-bootstrap/Form';
+import React, {useEffect,useState} from 'react';
+// import Header from './header/Header';
+import '../Functions/conversor/style.css';
+
 
 
 export const ConvDeMoneda = () => {
-  const [amount, setAmount] = useState('');
-  const [fromCurrency, setFromCurrency] = useState('');
-  const [toCurrency, setToCurrency] = useState('');
-  const [convertedAmount, setConvertedAmount] = useState('');
+  const [monedas, setMonedas] = useState([]);
+  const [moneda1, setMoneda1] = useState('USD');
+  const [moneda2, setMoneda2] = useState('EUR');
+  const [monto, setMonto] = useState(undefined);
+  const [result, setResult] = useState(undefined);
 
-  const convertCurrency = async () => {
-    try {
-      const response = await axios.get(
-        `https://api.exchangeratesapi.io/latest?base=${fromCurrency}&symbols=${toCurrency}`
-      );
-      const rate = response.data.rates[toCurrency];
-      const converted = amount * rate;
-      setConvertedAmount(converted.toFixed(2));
-    } catch (error) {
-      console.error(error);
+  useEffect(() => {
+    const host = 'api.frankfurter.app';
+    fetch(`https://${host}/currencies`)
+      .then((resp) => resp.json())
+      .then((data) => {
+        setMonedas(Object.keys(data));
+      });
+  }, []);
+
+  useEffect(() => {
+    setMonto('')
+    setResult('')
+  }, [moneda1, moneda2])
+
+  const handleConvert = () => {
+    if (moneda1 !== moneda2) {
+      const host = 'api.frankfurter.app';
+      fetch(
+        `https://${host}/latest?amount=${monto}&from=${moneda1}&to=${moneda2}`
+      )
+        .then((resp) => resp.json())
+        .then((data) => {setResult(data.rates[moneda2])});
     }
   };
   return (
-    <> <Header />
-       <h1>Convertidor</h1>
-       <div className="container">
-      <div className="form-group">
-        <label htmlFor="amount">Monto:</label>
-        <input
-          type="number"
-          id="amount"
-          className="form-control"
-          value={amount}
-          onChange={(e) => setAmount(e.target.value)}
-        />
-      </div>
-      <div className="form-group">
-        <label htmlFor="fromCurrency">De:</label>
-        <select
-          id="fromCurrency"
-          className="form-control"
-          value={fromCurrency}
-          onChange={(e) => setFromCurrency(e.target.value)}
-        >
-          <option value="USD">USD</option>
-          <option value="EUR">EUR</option>
-          <option value="GBP">GBP</option>
-        </select>
-      </div>
-      <div className="form-group">
-        <label htmlFor="toCurrency">Para:</label>
-        <select
-          id="toCurrency"
-          className="form-control"
-          value={toCurrency}
-          onChange={(e) => setToCurrency(e.target.value)}
-        >
-          <option value="USD">USD</option>
-          <option value="EUR">EUR</option>
-          <option value="GBP">GBP</option>
-        </select>
-      </div>
-      <button className="btn btn-primary" onClick={convertCurrency}>
-        Convert
-      </button>
-      {convertedAmount && (
-        <div className="mt-3">
-          <p>Converted Amount: {convertedAmount}</p>
+    <> 
+      {/* <Header /> */}
+      
+      <div className="background">
+      <div className="container">
+        <div className="selects-container">
+          <select
+            value={moneda1}
+            name="moneda-1"
+            id="moneda-1"
+            onChange={(e) => setMoneda1(e.target.value)}
+          >
+            {monedas.map((moneda) => (
+              <option value={moneda}>{moneda}</option>
+            ))}
+          </select>
+          <select
+            value={moneda2}
+            name="moneda-2"
+            id="moneda-2"
+            onChange={(e) => setMoneda2(e.target.value)}
+          >
+            {monedas.map((moneda) => (
+              <option value={moneda}>{moneda}</option>
+            ))}
+          </select>
         </div>
-      )}
+        <div className="inputs-container">
+          <input
+            className=""
+            type="text"
+            value={monto}
+            onChange={(e) => setMonto(e.target.value)}
+          />
+          <p className=""> {moneda2}: {result}</p>
+        </div>
+        <div>
+          <button onClick={handleConvert}>Convertir</button>
+        </div>
+      </div>
     </div>
+
+     
     </>
   );
 }

@@ -1,9 +1,11 @@
 import React from 'react';
 import './Footer.css';
+import logo from '../header/NovaBank.png'
 
 export const Footer = () => {
   return (
         <footer className="footer">
+            <img src={logo} alt='logo-Novabank' />
             <div className="container">
                 <div className="footer-row">
                     <div className="footer-links">
