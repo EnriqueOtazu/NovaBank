@@ -1,6 +1,5 @@
 import React, {useEffect,useState} from 'react';
 import Header from './header/Header';
-import '../Functions/conversor/style.css';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Footer from '../Pages/Footer/Footer';

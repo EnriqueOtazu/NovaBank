@@ -52,7 +52,7 @@ export const Registro = () => {
             </Form.Group>
 
             <Form.Group className="mb-4 d-grid gap-2" controlId="submit">
-              <Button variant="light"  type="submit" href='/'>
+              <Button variant="light"  type="submit" href='/InicioSesion'>
                 Volver
               </Button>
             </Form.Group>
