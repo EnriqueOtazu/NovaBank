@@ -33,7 +33,15 @@ export const Header = () => {
             <NavDropdown.Item href="../ConvertidorDeMoneda">Conv. De monedas</NavDropdown.Item>
             <NavDropdown.Item href="#">Transferencias</NavDropdown.Item>
             <NavDropdown.Item href="#">Págos</NavDropdown.Item>
+            {/* ATENCION AL CLIENTE NO LINKEA */}
+            {/* una vez que linkee aca, hay que modificar el href de:
+            contactanos
+            preguntas frecuentes
+            empleos
+             */}
+            {/* <NavDropdown.Item href="../AtencionCliente">Atención al cliente</NavDropdown.Item> */}
             <NavDropdown.Item href="#">Atención al cliente</NavDropdown.Item>
+
             <NavDropdown.Divider />
             <NavDropdown.Item href="#">Mi cuenta</NavDropdown.Item>
             <NavDropdown.Item href="#">Ayuda</NavDropdown.Item>

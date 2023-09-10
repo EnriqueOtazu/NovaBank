@@ -11,7 +11,7 @@ export const Footer = () => {
                     <div className="footer-links">
                         <h4>Ayuda</h4>
                         <ul>
-                            <li><a href="/#">Contactanos</a></li>
+                            <li><a href="mailto:novabank@gmail.com">Contactanos</a></li>
                             <li><a href="/#">Politica de Privacidad</a></li>
                             <li><a href="/#">Terminos y Condiciones</a></li>
                             <li><a href="/#">Preguntas Frecuentes</a></li>
@@ -40,10 +40,10 @@ export const Footer = () => {
                     <div className="footer-links">
                         <h4>Redes Sociales</h4>
                         <div className="social-link">
-                            <a href="/#"><i className="fa-brands fa-facebook"></i></a>
-                            <a href="/#"><i className="fa-brands fa-x-twitter"></i></a>
-                            <a href="/#"><i className="fa-brands fa-whatsapp"></i></a>
-                            <a href="/#"><i className="fa-brands fa-instagram"></i></a>
+                            <a href="https://www.facebook.com" target='blank'><i className="fa-brands fa-facebook"></i></a>
+                            <a href="https://www.twitter.com" target='blank'><i className="fa-brands fa-x-twitter"></i></a>
+                            <a href="https://www.whatsapp.com" target='blank'><i className="fa-brands fa-whatsapp"></i></a>
+                            <a href="https://www.instagram.com" target='blank'><i className="fa-brands fa-instagram"></i></a>
                         </div>
                     </div>
                 </div>
