@@ -1,10 +1,10 @@
 
-import Navbar from "@/components/Navbar";
+import NavbarMenu from "@/components/Navbar";
 export default function Menu(){
     return(
         <>
             {/* Navbar */}
-            <Navbar/>
+            <NavbarMenu/>
         </>
     );
 }
