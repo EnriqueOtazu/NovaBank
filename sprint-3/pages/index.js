@@ -1,6 +1,7 @@
 
 import HeaderBasic from "@/components/HeaderBasic"
 import Carousel from "@/components/Carousel"
+import Footer from "@/components/Footer"
 export default function Home() {
   return (
     <>
@@ -32,6 +33,9 @@ export default function Home() {
           Hoy, NovaBank es reconocido como un líder en banca sostenible, tecnológicamente avanzada y comprometida con el bienestar financiero de sus clientes. Su historia es un testimonio de cómo la pasión, la perseverancia y la innovación pueden dar forma a un banco que no solo sobrevive, sino que prospera en cualquier circunstancia.
         </p>
       </div>
+
+      {/* Footer */}
+      <Footer/>
     </>
   )
 }
