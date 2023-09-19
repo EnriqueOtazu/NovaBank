@@ -6,9 +6,9 @@ import Link from "next/link";
 export default function Footer () {
   return (
         <footer className="footer">
-            <Link href="/">
-                <Image src="/NovaBank.png" width={180} height={40}/>
-            </Link>
+            
+            <Image src="/NovaBank.png" width={180} height={40}/>
+            
             <div className="container">
                 <div className="footer-row">
                     <div className="footer-links">

@@ -28,22 +28,22 @@ export default function NavbarMenu() {
                     </Offcanvas.Header>
                     <hr/>
                     <Offcanvas.Body className="d-grid " style={{fontSize: 20}} >
-                        <NavDropdown.Item  href="/menu/Menu" > Inicio</NavDropdown.Item>
+                        <NavDropdown.Item  href="/Menu" > Inicio</NavDropdown.Item>
                         <NavDropdown.Item href="#" >Cuentas y Tarjetas</NavDropdown.Item>
-                        <NavDropdown.Item href="../prestamos">Préstamos</NavDropdown.Item>
-                        <NavDropdown.Item href="../ConvertidorDeMoneda">Conv. De monedas</NavDropdown.Item>
+                        <NavDropdown.Item ><Link href="/Prestamos">Préstamos</Link></NavDropdown.Item>
+                        <NavDropdown.Item ><Link href="/Conversor">Conversor de moneda</Link></NavDropdown.Item>
                         <NavDropdown.Item href="#">Transferencias</NavDropdown.Item>
                         <NavDropdown.Item href="#">Págos</NavDropdown.Item>
                         <hr/>
                         <NavDropdown.Item href="#">Mi cuenta</NavDropdown.Item>
                         <NavDropdown.Item href="#">Ayuda</NavDropdown.Item>
-                        <NavDropdown.Item href="/#">Cerrar Sección</NavDropdown.Item>
+                        <NavDropdown.Item href="/">Cerrar Sección</NavDropdown.Item>
                     </Offcanvas.Body>
                 </Offcanvas>
 
                 {/* Logo */}
                 <Navbar.Collapse className="justify-content-center">
-                    <Link href="/menu/Menu">
+                    <Link href="/Menu">
                         <Image
                             alt="Logo NovaBank"
                             src="/NovaBank.png"

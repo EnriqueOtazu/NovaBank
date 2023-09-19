@@ -26,7 +26,7 @@ export default function HeaderBasic(){
                                 <a className="nav-link" aria-current="page" href="#">Ayuda</a>
                             </li>
                             <li className="nav-item">
-                                <Link className="nav-link" aria-current="page" href="/login/InicioSesion">Mi cuenta</Link>
+                                <Link className="nav-link" aria-current="page" href="/InicioSesion">Mi cuenta</Link>
                             </li>
                            
                         </ul>
