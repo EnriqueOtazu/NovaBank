@@ -18,24 +18,23 @@ export default function NavbarMenu() {
             <Navbar className="bg-body-tertiary" color="faded" style={{ boxShadow: ' 0px 0.5px 0px 0px rgba(0,0,0,0.3)' }}>
 
                 {/* Boton sidebar */}
-                <Button variant="light" className="m-lg-2" color="primary" onClick={handleShow} style={{ boxShadow: ' 0.5px 0.5px 0.5px 0.5px rgba(0,0,0,0.3)' }}>
+                <Button variant="light" className="m-lg-2" onClick={handleShow} style={{ boxShadow: ' 0.5px 0.5px 0.5px 0.5px rgba(0,0,0,0.3)' }}>
                     ☰ Menú
                 </Button>
 
                 <Offcanvas show={show} onHide={handleClose}>
                     <Offcanvas.Header closeButton>
-                        <Offcanvas.Title>Menú</Offcanvas.Title>
+                        <Offcanvas.Title style={{color:'#3044B6', fontSize: 25}}>Menú</Offcanvas.Title>
                     </Offcanvas.Header>
-                    <NavDropdown.Divider />
-                    <Offcanvas.Body className="d-grid gap-2">
-                        <NavDropdown.Item  href="/menu/Menu"><Button variant="light"  size="lg" > Inicio</Button></NavDropdown.Item>
-                        <NavDropdown.Item href="#">Cuentas y Tarjetas</NavDropdown.Item>
+                    <hr/>
+                    <Offcanvas.Body className="d-grid " style={{fontSize: 20}} >
+                        <NavDropdown.Item  href="/menu/Menu" > Inicio</NavDropdown.Item>
+                        <NavDropdown.Item href="#" >Cuentas y Tarjetas</NavDropdown.Item>
                         <NavDropdown.Item href="../prestamos">Préstamos</NavDropdown.Item>
                         <NavDropdown.Item href="../ConvertidorDeMoneda">Conv. De monedas</NavDropdown.Item>
                         <NavDropdown.Item href="#">Transferencias</NavDropdown.Item>
                         <NavDropdown.Item href="#">Págos</NavDropdown.Item>
-
-                        <NavDropdown.Divider />
+                        <hr/>
                         <NavDropdown.Item href="#">Mi cuenta</NavDropdown.Item>
                         <NavDropdown.Item href="#">Ayuda</NavDropdown.Item>
                         <NavDropdown.Item href="/#">Cerrar Sección</NavDropdown.Item>
