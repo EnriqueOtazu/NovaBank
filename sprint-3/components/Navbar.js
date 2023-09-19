@@ -1,57 +1,61 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import Navbar from 'react-bootstrap/Navbar';
+import Button from 'react-bootstrap/Button';
+import Offcanvas from 'react-bootstrap/Offcanvas';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import { useState } from "react";
 
 
-export default function Navbar() {
-    const sidebar = () => {
-        return (
-            <>
-                <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Offcanvas with body scrolling</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <p>Try scrolling the rest of the page to see this option in action.</p>
-                    </div>
-                </div>
-            </>
-        );
-    }
+export default function NavbarMenu() {
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
     return (
         <>
-            {/* NavBar con sidebar */}
-            <nav className="navbar navbar-expand-lg bg-body-tertiary" style={{ boxShadow: ' 0px 0.5px 0px 0px rgba(0,0,0,0.3)' }}>
-                <div className="container-fluid">
+            <Navbar className="bg-body-tertiary" color="faded" style={{ boxShadow: ' 0px 0.5px 0px 0px rgba(0,0,0,0.3)' }}>
 
-                    {/* Sidebar -  Offcanvas */}
-                    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" id="sidebar" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Menú</button>
+                {/* Boton sidebar */}
+                <Button variant="light" className="m-lg-2" color="primary" onClick={handleShow} style={{ boxShadow: ' 0.5px 0.5px 0.5px 0.5px rgba(0,0,0,0.3)' }}>
+                    ☰ Menú
+                </Button>
 
-                    {/* Logo */}
+                <Offcanvas show={show} onHide={handleClose}>
+                    <Offcanvas.Header closeButton>
+                        <Offcanvas.Title>Menú</Offcanvas.Title>
+                    </Offcanvas.Header>
+                    <NavDropdown.Divider />
+                    <Offcanvas.Body className="d-grid gap-2">
+                        <NavDropdown.Item  href="/menu/Menu"><Button variant="light"  size="lg" > Inicio</Button></NavDropdown.Item>
+                        <NavDropdown.Item href="#">Cuentas y Tarjetas</NavDropdown.Item>
+                        <NavDropdown.Item href="../prestamos">Préstamos</NavDropdown.Item>
+                        <NavDropdown.Item href="../ConvertidorDeMoneda">Conv. De monedas</NavDropdown.Item>
+                        <NavDropdown.Item href="#">Transferencias</NavDropdown.Item>
+                        <NavDropdown.Item href="#">Págos</NavDropdown.Item>
 
-                    <Link href="/menu/Menu" className="text-center">
-                        <Image src="/NovaBank.png" width={180} height={40} />
+                        <NavDropdown.Divider />
+                        <NavDropdown.Item href="#">Mi cuenta</NavDropdown.Item>
+                        <NavDropdown.Item href="#">Ayuda</NavDropdown.Item>
+                        <NavDropdown.Item href="/#">Cerrar Sección</NavDropdown.Item>
+                    </Offcanvas.Body>
+                </Offcanvas>
+
+                {/* Logo */}
+                <Navbar.Collapse className="justify-content-center">
+                    <Link href="/menu/Menu">
+                        <Image
+                            alt="Logo NovaBank"
+                            src="/NovaBank.png"
+                            width={180}
+                            height={40}
+                        />
                     </Link>
+                </Navbar.Collapse>
+                
 
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-
-                    <div className="collapse navbar-collapse container-fluid " id="navbarSupportedContent">
-                        <ul className="navbar-nav mb-2 mb-lg-0">
-
-                            <li className="nav-item">
-                                <a className="nav-link" aria-current="page" href="#">Ayuda</a>
-                            </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" aria-current="page" href="/login/InicioSesion">Mi cuenta</Link>
-                            </li>
-
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+            </Navbar >
         </>
     );
 }
