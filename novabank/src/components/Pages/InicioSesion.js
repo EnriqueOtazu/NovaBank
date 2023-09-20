@@ -6,7 +6,7 @@ import Form from 'react-bootstrap/Form';
 import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Footer from './Footer/Footer';
+import Footer from '../../../../sprint-3/components/Footer/Footer';
 
 export const InicioSesion = () => {
   return (
@@ -19,7 +19,7 @@ export const InicioSesion = () => {
             <div className=' p-5 bg-white '>
                 <Row className=''>
                     <Col>
-                        <Image src={Fondo}  width={500} height={400} rounded />
+                        <Image alt='' src={Fondo}  width={500} height={400} rounded />
                     </Col>
                     <Col>
                         <Form className='mb-5'>

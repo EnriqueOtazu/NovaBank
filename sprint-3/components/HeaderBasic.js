@@ -10,7 +10,7 @@ export default function HeaderBasic(){
             <nav className="navbar navbar-expand-lg bg-body-tertiary" style={{boxShadow:' 0px 0.5px 0px 0px rgba(0,0,0,0.3)'}}>
                 <div className="container-fluid">
                     <Link href="/">
-                        <Image src="/NovaBank.png" width={180} height={40}/>
+                        <Image alt=''src="/NovaBank.png" width={180} height={40}/>
                     </Link>
                     
 

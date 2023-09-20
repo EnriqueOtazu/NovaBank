@@ -1,4 +1,4 @@
-<section>
+{/* <section>
 <footer className="top">
     <img src={logo} alt='logo-Novabank' />
     
@@ -45,4 +45,4 @@
     
 
 </footer>
-</section>
+</section> */}

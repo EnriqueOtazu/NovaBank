@@ -14,7 +14,7 @@ export default function InicioSesion(){
             <div className="container w-75 bg-white mt-5 rounded shadow">
                 <div className="row align-items-stretch">
                     <div className="col bg d-none  d-lg-block col-md-5 col-lg-5 col-xl-6 rounded">
-                        <Image src="/fondoBanco.jpg" width={570} height={800}/>
+                        <Image alt='' src="/fondoBanco.jpg" width={570} height={800}/>
                     </div>
                     <div className="col bg-white p-5 rounded-end">
                         <h2 className="text-center  py-5">Bienvenido</h2>

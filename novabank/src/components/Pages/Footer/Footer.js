@@ -1,7 +1,7 @@
 import React from 'react';
 import './Footer.css';
 import logo from '../header/NovaBank.png'
-
+import NavLink from 'react-bootstrap/esm/NavLink';
 export const Footer = () => {
   return (
         <footer className="footer">
@@ -11,20 +11,21 @@ export const Footer = () => {
                     <div className="footer-links">
                         <h4>Ayuda</h4>
                         <ul>
-                            <li><a href="mailto:novabank@gmail.com">Contactanos</a></li>
-                            <li><a href="/#">Politica de Privacidad</a></li>
-                            <li><a href="/#">Terminos y Condiciones</a></li>
-                            <li><a href="/#">Preguntas Frecuentes</a></li>
+                            <li><NavLink href="mailto:novabank@gmail.com">Contactanos</NavLink></li>
+                
+                            <li><NavLink href="/#">Politica de Privacidad</NavLink></li>
+                            <li><NavLink href="/#">Terminos y Condiciones</NavLink></li>
+                            <li><NavLink href="/#">Preguntas Frecuentes</NavLink></li>
                         </ul>
                     </div>
 
                     <div className="footer-links">
                         <h4>Acerca de:</h4>
                         <ul>
-                            <li><a href="/#">Nosotros</a></li>
-                            <li><a href="/#">Empleos</a></li>
-                            <li><a href="/#">Preferencias de cookies</a></li>
-                            <li><a href="/#">Blogs</a></li>
+                            <li><NavLink href="/#">Nosotros</NavLink></li>
+                            <li><NavLink href="/#">Empleos</NavLink></li>
+                            <li><NavLink href="/#">Preferencias de cookies</NavLink></li>
+                            <li><NavLink href="/#">Blogs</NavLink></li>
                         </ul>
                     </div>
 
@@ -40,10 +41,10 @@ export const Footer = () => {
                     <div className="footer-links">
                         <h4>Redes Sociales</h4>
                         <div className="social-link">
-                            <a href="https://www.facebook.com" target='blank'><i className="fa-brands fa-facebook"></i></a>
-                            <a href="https://www.twitter.com" target='blank'><i className="fa-brands fa-x-twitter"></i></a>
-                            <a href="https://www.whatsapp.com" target='blank'><i className="fa-brands fa-whatsapp"></i></a>
-                            <a href="https://www.instagram.com" target='blank'><i className="fa-brands fa-instagram"></i></a>
+                            <NavLink href="https://www.facebook.com" target='blank'><i className="fa-brands fa-facebook"></i></NavLink>
+                            <NavLink href="https://www.twitter.com" target='blank'><i className="fa-brands fa-x-twitter"></i></NavLink>
+                            <NavLink href="https://www.whatsapp.com" target='blank'><i className="fa-brands fa-whatsapp"></i></NavLink>
+                            <NavLink href="https://www.instagram.com" target='blank'><i className="fa-brands fa-instagram"></i></NavLink>
                         </div>
                     </div>
                 </div>
