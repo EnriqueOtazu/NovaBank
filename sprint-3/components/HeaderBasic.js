@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
+
 export default function HeaderBasic(){
     return(
         <>
@@ -18,14 +19,14 @@ export default function HeaderBasic(){
                         <span className="navbar-toggler-icon"></span>
                     </button>
 
-                    <div className="collapse navbar-collapse container-fluid " id="navbarSupportedContent">
+                    <div className="collapse navbar-collapse container-fluid justify-content-end " id="navbarSupportedContent">
                         <ul className="navbar-nav mb-2 mb-lg-0">
 
-                            <li className="nav-item">
+                            <li className="nav-item h5">
                                 <a className="nav-link" aria-current="page" href="#">Ayuda</a>
                             </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" aria-current="page" href="/login/InicioSesion">Mi cuenta</Link>
+                            <li className="nav-item h5">
+                                <Link className="nav-link" aria-current="page" href="/InicioSesion">mi cuenta</Link>
                             </li>
                            
                         </ul>
