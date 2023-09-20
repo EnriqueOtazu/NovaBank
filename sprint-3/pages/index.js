@@ -1,6 +1,6 @@
 
 import HeaderBasic from "@/components/HeaderBasic"
-import Carousel from "@/components/Carousel"
+import CarouselImage from "@/components/Carousel"
 import Footer from "@/components/Footer"
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
       <h1 style={{textAlign:'center'}} className='p-4'><span style={{color:"#3044B6"}}>¡Hola!</span> ¿Cómo podemos ayudarte? </h1>
 
       {/* Carousel */}
-      <Carousel/>
+      <CarouselImage/>
 
       {/* Info del banco */}
       <div className='p-5'>

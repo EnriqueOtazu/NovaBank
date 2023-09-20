@@ -33,7 +33,7 @@
 .footer-links ul li {
     margin-bottom: 15px;
     list-style: none;
-    font-size: 15px;
+    font-size: 20px;
 }
 .footer-links ul li a{
     text-decoration: none;
@@ -60,8 +60,8 @@
     transition: all .5s ease;
 }
 .social-link a:hover{
-    background-color: #3044B6;
     color: #fff;
+    padding-left: 6px;
 }
 
 @media(max-width:991px){

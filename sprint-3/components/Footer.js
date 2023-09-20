@@ -7,7 +7,7 @@ export default function Footer () {
   return (
         <footer className="footer">
             
-            <Image src="/NovaBank.png" width={180} height={40}/>
+            <Image src="/NovaBank.png" width={180} height={30}/>
             
             <div className="container">
                 <div className="footer-row">
@@ -43,10 +43,10 @@ export default function Footer () {
                     <div className="footer-links">
                         <h4>Redes Sociales</h4>
                         <div className="social-link">
-                            <a href="https://www.facebook.com" target='blank'><i className="fa-brands fa-facebook"></i></a>
-                            <a href="https://www.twitter.com" target='blank'><i className="fa-brands fa-x-twitter"></i></a>
-                            <a href="https://www.whatsapp.com" target='blank'><i className="fa-brands fa-whatsapp"></i></a>
-                            <a href="https://www.instagram.com" target='blank'><i className="fa-brands fa-instagram"></i></a>
+                            <Link href="https://www.facebook.com" target='blank'><Image className="" src="/facebook.png" width={40} height={20}/></Link>
+                            <Link href="https://www.twitter.com" target='blank'><Image className="" src="/twitter.png" width={40} height={30}/></Link>
+                            <Link href="https://www.whatsapp.com" target='blank'><Image className="" src="/whatsapp.png" width={40} height={30}/></Link>
+                            <Link href="https://www.instagram.com" target='blank'><Image className="" src="/instagram.png" width={40} height={30}/></Link>
                         </div>
                     </div>
                 </div>
