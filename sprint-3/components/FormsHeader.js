@@ -11,8 +11,8 @@ export default function FormsHeader() {
             <Navbar className="bg-body-tertiary" color="faded" style={{ boxShadow: ' 0px 0.5px 0px 0px rgba(0,0,0,0.3)' }}>
 
                 {/* Boton sidebar */}
-                <Button variant="light" className="m-lg-2" style={{ boxShadow: ' 0.5px 0.5px 0.5px 0.5px rgba(0,0,0,0.3)' }}>
-                   <Link href="/" style={{color:'#3044B6', textDecoration:'none'}}>← Volver Inicio</Link> 
+                <Button  className="m-lg-2 " variant="primary">
+                   <Link href="/" style={{ textDecoration:'none'}} className="h5">← Volver Inicio</Link> 
                 </Button>
 
 
