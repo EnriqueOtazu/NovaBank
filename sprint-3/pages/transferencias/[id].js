@@ -1,10 +1,9 @@
-
-
 import { useRouter } from 'next/router';
 import accountsData from './accountsData';
-// Simula una lista de cuentas bancarias disponibles (esto puede provenir de tu fuente de datos real)
+import Link from 'next/link';
+import TransferForm from '@/components/TransferForm';
 
-function AccountDetails({ account, nombreCompleto }) {
+function AccountDetails({ account }) {
   const router = useRouter();
 
   // Verifica si la página se está generando en el servidor
@@ -15,9 +14,13 @@ function AccountDetails({ account, nombreCompleto }) {
   return (
     <div>
       <h1>Detalles de la Cuenta Bancaria</h1>
-      <p>Nombre: {nombreCompleto}</p>
-      <p>Saldo: ${account.saldo}</p>
-      {/* Otros detalles de la cuenta */}
+      <p>Nombre: {account.nombreCompleto}</p>
+      <p>Alias: {account.aliasBancario}</p>
+      <p>CBU: {account.cbu}</p>
+      <p>Banco de Origen: {account.nombreBanco}</p>
+      <Link href={`/transferir?cuenta=${JSON.stringify(account)}`}>
+        Realizar una Transferencia
+      </Link>
     </div>
   );
 }
@@ -28,7 +31,7 @@ export async function getStaticPaths() {
     params: { id: account.id.toString() },
   }));
 
-  return { paths, fallback: true }; // Cambiado a true para permitir rutas dinámicas
+  return { paths, fallback: true }; 
 }
 
 export async function getStaticProps({ params }) {
@@ -36,20 +39,18 @@ export async function getStaticProps({ params }) {
   const accountId = parseInt(params.id);
   const account = accountsData.find((acc) => acc.id === accountId);
 
-  // Verifica si existe account y nombreCompleto en el objeto antes de retornarlos
-  if (account && account.nombreCompleto) {
+  // Verifica si existe la cuenta en el objeto antes de retornarla
+  if (!account) {
     return {
-      props: {
-        account,
-        nombreCompleto: account.nombreCompleto, // Obtenido de la cuenta bancaria
-      },
-    };
-  } else {
-    // Si no se encuentra la cuenta o el nombreCompleto, puedes manejarlo de alguna manera (por ejemplo, redirigiendo a una página de error)
-    return {
-      notFound: true, // Otra opción podría ser: redirect: { destination: '/error', permanent: false }
+      notFound: true,
     };
   }
+
+  return {
+    props: {
+      account,
+    },
+  };
 }
 
 export default AccountDetails;

@@ -134,7 +134,8 @@ import accountsData from './transferencias/accountsData';
 function Transferencias() {
   return (
     <div>
-      <h1>Lista de Cuentas Bancarias Disponibles</h1>
+      <h1>Lista de Cuentas Bancarias Registradas</h1>
+      <h3>Haz click en cualquiera para recibir toda la informacion o realizarle una transferencia</h3>
       <ul>
         {accountsData.map((account) => (
           <li key={account.id}>

@@ -2,6 +2,7 @@
 import NavbarMenu from "@/components/Navbar";
 import Accordion from 'react-bootstrap/Accordion';
 import Footer from "@/components/Footer";
+import accountsData from "./transferencias/accountsData";
 export default function Menu() {
     return (
         <>
@@ -15,13 +16,13 @@ export default function Menu() {
                     <Accordion.Header>Cuentas</Accordion.Header>
                     <Accordion.Body>
 
-                        <h3>Saldo: $10.000</h3>
+                        <h3>Saldo: $ {accountsData[3].saldo.toFixed(2)}</h3>
                     </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="1">
                     <Accordion.Header>cuenta Dolar</Accordion.Header>
                     <Accordion.Body>
-                        <h3>Saldo: US$10</h3>
+                    <h3>Saldo: $ {accountsData[3].saldoUSD}</h3>
                     </Accordion.Body>
                 </Accordion.Item>
             </Accordion>
