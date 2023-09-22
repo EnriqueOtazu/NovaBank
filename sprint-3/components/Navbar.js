@@ -32,12 +32,12 @@ export default function NavbarMenu() {
                         <NavDropdown.Item href="#" >Cuentas y Tarjetas</NavDropdown.Item>
                         <NavDropdown.Item ><Link href="/Prestamos">Préstamos</Link></NavDropdown.Item>
                         <NavDropdown.Item ><Link href="/Conversor">Conversor de moneda</Link></NavDropdown.Item>
-                        <NavDropdown.Item href="#">Transferencias</NavDropdown.Item>
+                        <NavDropdown.Item href="/transferencias">Transferencias</NavDropdown.Item>
                         <NavDropdown.Item href="#">Págos</NavDropdown.Item>
                         <hr/>
                         <NavDropdown.Item href="#">Mi cuenta</NavDropdown.Item>
                         <NavDropdown.Item href="#">Ayuda</NavDropdown.Item>
-                        <NavDropdown.Item href="/">Cerrar Sección</NavDropdown.Item>
+                        <NavDropdown.Item href="/">Cerrar Sesión</NavDropdown.Item>
                     </Offcanvas.Body>
                 </Offcanvas>
 
