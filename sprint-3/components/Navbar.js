@@ -28,6 +28,7 @@ export default function NavbarMenu() {
                     </Offcanvas.Header>
                     <hr/>
                     <Offcanvas.Body className="d-grid " style={{fontSize: 20}} >
+<<<<<<< HEAD
                         <NavDropdown.Item  href="/Menu" > Inicio</NavDropdown.Item>
                         <NavDropdown.Item href="#" >Cuentas y Tarjetas</NavDropdown.Item>
                         <NavDropdown.Item ><Link href="/Prestamos">Préstamos</Link></NavDropdown.Item>
@@ -38,11 +39,23 @@ export default function NavbarMenu() {
                         <NavDropdown.Item href="#">Mi cuenta</NavDropdown.Item>
                         <NavDropdown.Item href="#">Ayuda</NavDropdown.Item>
                         <NavDropdown.Item href="/">Cerrar Sesión</NavDropdown.Item>
+=======
+                        <NavDropdown.Item><Link href="/Menu" className="btn btn-light d-grid" style={{fontSize:20}}>Inicio</Link></NavDropdown.Item>
+                        <NavDropdown.Item><Link href="/Conversor" className="btn btn-light d-grid" style={{fontSize:20}}>Cuentas y tarjetas</Link></NavDropdown.Item>
+                        <NavDropdown.Item><Link href="/Prestamos" className="btn btn-light d-grid" style={{fontSize:20}}>Préstamos</Link></NavDropdown.Item>
+                        <NavDropdown.Item><Link href="/Conversor" className="btn btn-light d-grid" style={{fontSize:20}}>Conversor de moneda</Link></NavDropdown.Item>
+                        <NavDropdown.Item><Link href="#" className="btn btn-light d-grid" style={{fontSize:20}}>Transferencias</Link></NavDropdown.Item>
+                        <NavDropdown.Item><Link href="#" className="btn btn-light d-grid" style={{fontSize:20}}>Págos</Link></NavDropdown.Item>
+                        <hr/>
+                        <NavDropdown.Item><Link href="#" className="btn btn-light d-grid" style={{fontSize:20}}>Mi cuenta</Link></NavDropdown.Item>
+                        <NavDropdown.Item><Link href="#" className="btn btn-light d-grid" style={{fontSize:20}}>Ayuda</Link></NavDropdown.Item>
+                        <NavDropdown.Item><Link href="/" className="btn btn-light d-grid" style={{fontSize:20}}>Cerra Sesión</Link></NavDropdown.Item>
+>>>>>>> 52f0b172ae3c19b2553ef9f916994a41293c1751
                     </Offcanvas.Body>
                 </Offcanvas>
 
                 {/* Logo */}
-                <Navbar.Collapse className="justify-content-center">
+                <Navbar.Collapse className="justify-content-center me-lg-5">
                     <Link href="/Menu">
                         <Image
                             alt="Logo NovaBank"

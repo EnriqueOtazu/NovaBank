@@ -34,6 +34,7 @@ export default function InicioSesion(){
                             </div>
 
                             <div className="d-grid">
+                                
                                 {/* Habilitar el button cuando se empiece el back */}
                                 {/* <button type="submit" className="btn btn-primary" href="/Menu"> iniciar Sesión</button> */}
 
@@ -41,8 +42,8 @@ export default function InicioSesion(){
                             </div>
 
                             <div className="my-3">
-                                <span>No tienes cuenta?<Link href="/Registro">Regístrate!</Link> </span> <br/>
-                                <span><Link href="/">Recuperar Contraseña!</Link> </span>
+                                <span>No tienes cuenta? <Link href="/Registro">Regístrate!</Link> </span> <br/>
+                                {/* <span><Link href="/">Recuperar Contraseña!</Link> </span> */}
                             </div>
                         </form>
                     </div>
