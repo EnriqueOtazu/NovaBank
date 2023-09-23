@@ -12,13 +12,13 @@ function AccountDetails({ account }) {
   }
 
   return (
-    <div>
+    <div className='container w-50 mt-5 mb-5 justify-content-center p-5 rounded shadow' style={{ boxShadow: '-4px 4px 12px 0px rgba(0,0,0,0.5)' }}>
       <h1>Detalles de la Cuenta Bancaria</h1>
-      <p>Nombre: {account.nombreCompleto}</p>
-      <p>Alias: {account.aliasBancario}</p>
-      <p>CBU: {account.cbu}</p>
-      <p>Banco de Origen: {account.nombreBanco}</p>
-      <Link href={`/transferir?cuenta=${JSON.stringify(account)}`}>
+      <p><b>Nombre:</b> {account.nombreCompleto}</p>
+      <p><b>Alias:</b> {account.aliasBancario}</p>
+      <p><b>CBU:</b> {account.cbu}</p>
+      <p><b>Banco de Origen:</b> {account.nombreBanco}</p>
+      <Link href={`/transferir?cuenta=${JSON.stringify(account)}`} className="btn btn-primary" style={{ fontSize: '20px' }}>
         Realizar una Transferencia
       </Link>
     </div>

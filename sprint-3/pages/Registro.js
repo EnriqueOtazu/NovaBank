@@ -40,7 +40,7 @@ export default function Registro() {
                         </Form.Group>
 
                         <Form.Group className="mb-4 d-grid gap-2" controlId="submit">
-                            <Button variant="primary" type="submit" id='submit' href='/menu'>
+                            <Button variant="primary" type="submit" id='submit' href='/Menu'>
                                 Registrar
                             </Button>
                         </Form.Group>

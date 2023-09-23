@@ -53,10 +53,10 @@ function TransferForm({ onSubmit }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <div>
-        <label>Monto a transferir:</label>
-        <input
+    <form onSubmit={handleSubmit} className='mb-5'>
+      <div className='mb-3' style={{ display: 'flex',  alignItems: 'center' }}>
+        <label style={{ marginRight: '10px' }}>Monto a transferir: </label>
+        <input 
           type="number"
           step="0.01"
           value={monto}
@@ -65,8 +65,8 @@ function TransferForm({ onSubmit }) {
         />
       </div>
       {mensajeError && <p className="error-message">{mensajeError}</p>}
-      <button type="submit">Realizar Transferencia</button>
-    </form>
+      <button className="btn btn-primary" style={{ fontSize: '15px' }} type="submit">Realizar Transferencia</button>   
+     </form>
   );
 }
 
@@ -77,14 +77,15 @@ function TransferirPage({ cuentaDestino }) {
   };
 
   return (
-    <div>
+    <div className='container w-50 mt-5 mb-5 justify-content-center p-5 rounded shadow' style={{ boxShadow: '-4px 4px 12px 0px rgba(0,0,0,0.5)' }} >
       <h1>Realizar Transferencia</h1>
       <TransferForm cuentaDestino={cuentaDestino} onSubmit={realizarTransferencia} />
-      <Link href="/transferencias">
+      <Link href="/transferencias" style={{display: 'inline-block',padding: '5px 15px',  backgroundColor: 'white',color: 'black',  borderRadius: '10px',  textDecoration: 'none', border: '1px solid #ccc' }}>
         Volver a la lista de cuentas
       </Link>
-      <tr></tr>
-      <Link href="/Menu">Volver al inicio</Link>
+     
+      <Link href="/Menu" style={{display: 'inline-block',padding: '5px 15px',  backgroundColor: 'white',color: 'black',  borderRadius: '10px',  textDecoration: 'none', border: '1px solid #ccc' }}>
+          Volver al inicio</Link>
       
     </div>
   );

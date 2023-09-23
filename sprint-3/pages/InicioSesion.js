@@ -42,7 +42,9 @@ export default function InicioSesion(){
                             </div>
 
                             <div className="my-3">
-                                <span>No tienes cuenta? <Link href="/Registro">Regístrate!</Link> </span> <br/>
+                                <span>No tienes cuenta?
+
+                                <Link href="/Registro">Regístrate!</Link> </span> <br/>
                                 {/* <span><Link href="/">Recuperar Contraseña!</Link> </span> */}
                             </div>
                         </form>

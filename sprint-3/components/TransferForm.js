@@ -89,7 +89,7 @@ function TransferForm({ cuentas, onSubmit }) {
         </div>
       )}
       <div>
-        <label>Monto a transferir:</label>
+        <label>Monto a transferir: </label>
         <input
           type="number"
           step="0.01"
@@ -99,7 +99,7 @@ function TransferForm({ cuentas, onSubmit }) {
         />
       </div>
       {mensajeError && <p className="error-message">{mensajeError}</p>}
-      <button type="submit">Realizar Transferencia</button>
+      <button  type="submit">Realizar Transferencia</button>
     </form>
   );
 }
