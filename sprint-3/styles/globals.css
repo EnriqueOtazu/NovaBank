@@ -25,3 +25,44 @@ body {
     )
     rgb(var(--background-start-rgb));
 } */
+/* Estilos para la tarjeta de crédito */
+.credit-card {
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #3044B6;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+  background-color: #a0abe6;
+  text-align: left;
+  margin: 20px auto;
+}
+
+.credit-card h1 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.credit-card p {
+  margin: 5px 0;
+}
+
+.credit-card b {
+  font-weight: bold;
+}
+
+/* Estilos para cada detalle */
+.credit-card .account-name {
+  color: #333;
+}
+
+.credit-card .alias {
+  color: #777;
+}
+
+.credit-card .cbu {
+  color: #444;
+}
+
+.credit-card .bank {
+  color: #555;
+}
