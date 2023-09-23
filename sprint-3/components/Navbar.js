@@ -29,7 +29,7 @@ export default function NavbarMenu() {
                     <hr/>
                     <Offcanvas.Body className="d-grid " style={{fontSize: 20}} >
                         <NavDropdown.Item><Link href="/Menu" className="btn btn-light d-grid" style={{fontSize:20}}>Inicio</Link></NavDropdown.Item>
-                        <NavDropdown.Item><Link href="/Conversor" className="btn btn-light d-grid" style={{fontSize:20}}>Cuentas y tarjetas</Link></NavDropdown.Item>
+                        <NavDropdown.Item><Link href="/tarjetas" className="btn btn-light d-grid" style={{fontSize:20}}>Cuentas y tarjetas</Link></NavDropdown.Item>
                         <NavDropdown.Item><Link href="/Prestamos" className="btn btn-light d-grid" style={{fontSize:20}}>Préstamos</Link></NavDropdown.Item>
                         <NavDropdown.Item><Link href="/Conversor" className="btn btn-light d-grid" style={{fontSize:20}}>Conversor de moneda</Link></NavDropdown.Item>
                         <NavDropdown.Item><Link href="/transferencias" className="btn btn-light d-grid" style={{fontSize:20}}>Transferencias</Link></NavDropdown.Item>
