@@ -1,5 +1,5 @@
 import { useState } from "react";
-import accountsData from "@/pages/transferencias/accountsData";
+import accountsData from "../pages/transferencias/accountsData";
 
 function TransferForm({ cuentas, onSubmit }) {
   const [alias, setAlias] = useState('');
@@ -99,7 +99,7 @@ function TransferForm({ cuentas, onSubmit }) {
         />
       </div>
       {mensajeError && <p className="error-message">{mensajeError}</p>}
-      <button  type="submit">Realizar Transferencia</button>
+      <button type="submit">Realizar Transferencia</button>
     </form>
   );
 }

@@ -3,6 +3,14 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 
+export const transferir = () => {
+  return (
+    <div>transferir</div>
+  )
+}
+
+
+
 // Cuenta de origen fija
 const cuentaOrigen =  {
   "id": 4,

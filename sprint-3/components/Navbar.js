@@ -33,7 +33,7 @@ export default function NavbarMenu() {
                         <NavDropdown.Item><Link href="/Prestamos" className="btn btn-light d-grid" style={{fontSize:20}}>Préstamos</Link></NavDropdown.Item>
                         <NavDropdown.Item><Link href="/Conversor" className="btn btn-light d-grid" style={{fontSize:20}}>Conversor de moneda</Link></NavDropdown.Item>
                         <NavDropdown.Item><Link href="/transferencias" className="btn btn-light d-grid" style={{fontSize:20}}>Transferencias</Link></NavDropdown.Item>
-                        <NavDropdown.Item><Link href="#" className="btn btn-light d-grid" style={{fontSize:20}}>Págos</Link></NavDropdown.Item>
+                        <NavDropdown.Item><Link href="/Pagos" className="btn btn-light d-grid" style={{fontSize:20}}>Págos</Link></NavDropdown.Item>
                         <hr/>
                         <NavDropdown.Item><Link href="#" className="btn btn-light d-grid" style={{fontSize:20}}>Mi cuenta</Link></NavDropdown.Item>
                         <NavDropdown.Item><Link href="#" className="btn btn-light d-grid" style={{fontSize:20}}>Ayuda</Link></NavDropdown.Item>

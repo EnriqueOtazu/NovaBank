@@ -1,5 +1,5 @@
 import React from 'react';
-import tarjetasData from './tarjetas/tarjetasData.js';
+import tarjetasData from '../components/tarjetas/tarjetasData.js';
 import Link from 'next/link';
 
 function TarjetasPage() {
