@@ -127,26 +127,36 @@
 // export default Transferencias;
 // pages/transferencias.js
 
+import NavbarMenu from '@/components/Navbar';
 import Link from 'next/link';
 import accountsData from './transferencias/accountsData';
+import Footer from '@/components/Footer';
   
 
 function Transferencias() {
   return (
-    <div className='container w-50 mt-5 mb-5 justify-content-center p-5 rounded shadow' style={{ boxShadow: '-4px 4px 12px 0px rgba(0,0,0,0.5)' }}>
-      <h1>Cuentas Bancarias Registradas</h1>
-      <h4>Haz click en cualquiera para recibir toda la informacion o realizarle una transferencia</h4>
-      <ul>
-        {accountsData.map((account) => (
-          <li style={{ listStyleType: 'none'}} key={account.id}>
-            <Link href={`/transferencias/${account.id}}`} className="btn btn-light d-grid" style={{fontSize:20, width: '300px', border: '1px solid #3044B6',margin: '5px'}}> 
-            {/* <Link href={`/transferencias/${account.id}/${encodeURIComponent(account.nombreCompleto)}`}>          */}
-                 {account.nombreCompleto}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <>
+      {/* NavBar */}
+      <NavbarMenu/>
+
+      <div className='container w-50 mt-5 mb-5 justify-content-center p-5 rounded shadow' style={{ boxShadow: '-4px 4px 12px 0px rgba(0,0,0,0.5)' }}>
+        <h1>Cuentas Bancarias Registradas</h1>
+        <h4>Haz click en cualquiera para recibir toda la informacion o realizarle una transferencia</h4>
+        <ul>
+          {accountsData.map((account) => (
+            <li style={{ listStyleType: 'none'}} key={account.id}>
+              <Link href={`/transferencias/${account.id}}`} className="btn btn-light d-grid" style={{fontSize:20, width: '300px', border: '1px solid #3044B6',margin: '5px'}}> 
+              {/* <Link href={`/transferencias/${account.id}/${encodeURIComponent(account.nombreCompleto)}`}>          */}
+                  {account.nombreCompleto}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Footer */}
+      <Footer />
+    </>
   );
 }
 
